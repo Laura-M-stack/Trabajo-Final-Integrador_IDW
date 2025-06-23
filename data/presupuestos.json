@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nombre": "Perez Mar\u00eda",
+    "fecha": "2025-07-25",
+    "tematica": "Shrek",
+    "servicios": [
+      "Maquillaje art\u00edstico",
+      "Torta mediana (para 30 personas)",
+      "Mesa dulce para 30 personas"
+    ],
+    "total": 105000
+  },
+  {
+    "id": 2,
+    "nombre": "Gonzalez Claudia",
+    "fecha": "2025-08-20",
+    "tematica": "Capybara",
+    "servicios": [
+      "Maquillaje art\u00edstico",
+      "Torta grande (para 50 personas)",
+      "Mesa dulce para 50 personas"
+    ],
+    "total": 160000
+  }
+]

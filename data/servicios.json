@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "descripcion": "Maquillaje art\u00edstico",
+    "valor": 10000
+  },
+  {
+    "id": 2,
+    "descripcion": "Torta grande (para 50 personas)",
+    "valor": 50000
+  },
+  {
+    "id": 3,
+    "descripcion": "Torta mediana (para 30 personas)",
+    "valor": 35000
+  },
+  {
+    "id": 4,
+    "descripcion": "Torta chica (para 20 personas)",
+    "valor": 28000
+  },
+  {
+    "id": 5,
+    "descripcion": "Mesa dulce para 50 personas",
+    "valor": 100000
+  },
+  {
+    "id": 6,
+    "descripcion": "Mesa dulce para 30 personas",
+    "valor": 60000
+  },
+  {
+    "id": 7,
+    "descripcion": "Mesa dulce para 20 personas",
+    "valor": 45000
+  }
+]
