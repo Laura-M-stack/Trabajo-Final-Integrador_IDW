@@ -1,7 +1,7 @@
 # Salones Spider-Kitty - Sistema de Gestión de Eventos
 
 ## Descripción General
-El sistema de administración **Salones Spider-Kitty** proporciona una solución integral para la gestión de espacios destinados a eventos sociales y corporativos. Esta plataforma permite el control centralizado de los recursos disponibles, facilitando las operaciones administrativas mediante una interfaz intuitiva.
+El sistema de administración **Salones Spider-Kitty** proporciona una solución integral para la gestión de espacios destinados a fiestas infantiles. Esta plataforma permite el control centralizado de los recursos disponibles, facilitando las operaciones administrativas mediante una interfaz intuitiva.
 
 ## Características Técnicas
 
