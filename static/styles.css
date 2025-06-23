@@ -334,5 +334,81 @@ nav li:hover {
     font-size: 1rem;
     color: #333;
   }
-  
-  
+
+/* === Estilos para página de servicios y presupuestos === */
+.table th, .table td {
+  vertical-align: middle;
+}
+
+#formPresupuesto .form-label,
+#formServicio .form-label {
+  font-weight: 600;
+}
+
+#formPresupuesto .form-check-label {
+  font-weight: 500;
+}
+
+#formPresupuesto .form-check-input {
+  margin-right: 0.5rem;
+}
+
+#formPresupuesto h4,
+#formPresupuesto .btn {
+  margin-top: 1rem;
+}
+
+#valorTotal {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* ================================
+   Correcciones visuales integradas
+   ================================ */
+
+/* Fondo azul para encabezados de tabla */
+.card-header.bg-primary {
+  background-color: #007bff !important;
+  padding: 1rem 1.25rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+/* Botones alineados en fila con separación */
+.volver-y-accion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Consistencia de márgenes y paddings */
+main.container {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+/* Títulos de sección */
+main h1,
+main h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Botón "Volver" estandarizado */
+.btn-volver {
+  align-self: start;
+}
+
+/* Correcciones para tabla principal */
+.table-responsive {
+  margin-bottom: 2rem;
+}
+
+/* Formulario dentro de tarjetas */
+form.card {
+  margin-bottom: 2rem;
+}
