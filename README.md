@@ -51,6 +51,24 @@ El sistema de administración **Salones Spider-Kitty** proporciona una solución
 - La carga de imágenes funciona mediante vista previa local
 
 
+### Nuevas funcionalidades agregadas en la entrega final
+
+#### Gestión de Servicios
+- Se implementó un panel de administración donde se pueden **crear, editar y eliminar** servicios ofrecidos por los salones.
+- Cada servicio incluye una **descripción** y un **valor monetario**.
+- Los datos se almacenan en `localStorage` y se precargan desde un archivo `data/servicios.json` si no hay datos previos.
+- Interfaz desarrollada con Bootstrap, responsive y consistente con el diseño del sistema.
+
+#### Generador de Presupuestos
+- Permite registrar presupuestos personalizados para clientes.
+- Incluye campos de **nombre del cliente**, **fecha del evento**, **temática** y selección múltiple de servicios disponibles.
+- Calcula automáticamente el total del presupuesto en base a los servicios elegidos.
+- Los datos se almacenan en `localStorage`, con ejemplos cargados desde `data/presupuestos.json` si el almacenamiento está vacío.
+
+#### Persistencia sin backend
+- Para garantizar que los datos se visualicen en la demo en Netlify, se utilizan archivos `.json` públicos como fuente inicial.
+- Luego, la información permanece guardada en el navegador mediante `localStorage`.
+
 ## Equipo de Desarrollo
 
 **Integrantes:**  
@@ -58,4 +76,4 @@ Mariano Bustos
 Laura Moyano
 Ileana Nieto
 Maximiliano Ortiz
-
+---
