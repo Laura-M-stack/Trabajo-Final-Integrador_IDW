@@ -89,15 +89,21 @@
 
     <main class="container my-5">
       <h1 class="mb-4">Panel de Administración</h1>
-      <div class="mb-4">
+      <div class="mb-4 d-flex flex-wrap gap-2">
         <a href="usuarios.html" class="btn btn-info">
           <i class="fas fa-users me-1"></i> Ver Usuarios Registrados
         </a>
+        <a href="servicios.html" class="btn btn-primary">
+          <i class="fas fa-concierge-bell me-1"></i> Gestionar Servicios
+        </a>
+        <a href="presupuestos.html" class="btn btn-success">
+          <i class="fas fa-file-invoice-dollar me-1"></i> Ver Presupuestos
+        </a>
+    </div>
       </div>
       <div class="card shadow-sm">
         <div
-          class="card-header bg-primary text-white d-flex justify-content-between align-items-center"
-        >
+          class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
           <h2 class="mb-0">Listado de Salones</h2>
           <button id="btnNuevoSalon" class="btn btn-success">
             <i class="fas fa-plus me-1"></i> Nuevo Salón
