@@ -72,8 +72,8 @@ El sistema de administración **Salones Spider-Kitty** proporciona una solución
 ## Equipo de Desarrollo
 
 **Integrantes:**  
-Mariano Bustos
-Laura Moyano
-Ileana Nieto
-Maximiliano Ortiz
+- Mariano Bustos
+- Laura Moyano
+- Ileana Nieto
+- Maximiliano Ortiz
 ---
