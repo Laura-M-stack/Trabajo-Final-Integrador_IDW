@@ -1,26 +1,30 @@
 [
   {
     "id": 1,
-    "nombre": "Perez Mar\u00eda",
+    "nombre": "Pérez María",
     "fecha": "2025-07-25",
     "tematica": "Shrek",
+    "salon": "Fiestilandia",
+    "precioSalon": 99000,
     "servicios": [
-      "Maquillaje art\u00edstico",
+      "Maquillaje artístico",
       "Torta mediana (para 30 personas)",
       "Mesa dulce para 30 personas"
     ],
-    "total": 105000
+    "total": 204000
   },
   {
     "id": 2,
-    "nombre": "Gonzalez Claudia",
+    "nombre": "González Claudia",
     "fecha": "2025-08-20",
     "tematica": "Capybara",
+    "salon": "El Castillo",
+    "precioSalon": 120000,
     "servicios": [
-      "Maquillaje art\u00edstico",
+      "Maquillaje artístico",
       "Torta grande (para 50 personas)",
       "Mesa dulce para 50 personas"
     ],
-    "total": 160000
+    "total": 280000
   }
 ]
