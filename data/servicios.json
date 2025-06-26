@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "descripcion": "Maquillaje art\u00edstico",
+    "descripcion": "Maquillaje artístico",
     "valor": 10000
   },
   {
@@ -33,5 +33,25 @@
     "id": 7,
     "descripcion": "Mesa dulce para 20 personas",
     "valor": 45000
+  },
+  {
+    "id": 8,
+    "descripcion": "Decoración temática básica",
+    "valor": 25000
+  },
+  {
+    "id": 9,
+    "descripcion": "Decoración premium con globos",
+    "valor": 40000
+  },
+  {
+    "id": 10,
+    "descripcion": "Show de animación",
+    "valor": 55000
+  },
+  {
+    "id": 11,
+    "descripcion": "Animador/a con juegos",
+    "valor": 30000
   }
 ]
