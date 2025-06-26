@@ -4,9 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const listaServicios = document.getElementById("listaServicios");
   const valorTotal = document.getElementById("valorTotal");
   const tablaPresupuestos = document.getElementById("tablaPresupuestos");
+  const salonSelect = document.getElementById("salon");
 
   let servicios = [];
   let presupuestos = [];
+  let salones = [];
 
   function cargarDatosIniciales() {
     const servLS = localStorage.getItem("servicios");
@@ -36,7 +38,31 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    const salLS = localStorage.getItem("salones");
+    if (salLS) {
+      salones = JSON.parse(salLS);
+      renderSalones();
+    } else {
+      fetch("../data/salones.json")
+        .then(r => r.json())
+        .then(data => {
+          salones = data.salones;
+          localStorage.setItem("salones", JSON.stringify(salones));
+          renderSalones();
+        });
+    }
+
     renderPresupuestos();
+  }
+
+  function renderSalones() {
+    salonSelect.innerHTML = '<option value="" disabled selected>Seleccioná un salón</option>';
+    salones.forEach((salon, index) => {
+      const option = document.createElement("option");
+      option.value = index;
+      option.textContent = `${salon.nombre} ($${salon.precio.toLocaleString("es-AR")})`;
+      salonSelect.appendChild(option);
+    });
   }
 
   function renderServiciosCheckbox() {
@@ -57,17 +83,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function calcularTotal() {
     let total = 0;
+
     servicios.forEach((servicio, index) => {
       const checkbox = document.getElementById("servicio" + index);
       if (checkbox && checkbox.checked) {
         total += servicio.valor;
       }
     });
+
+    const selectedSalonIndex = salonSelect.value;
+    if (selectedSalonIndex !== "") {
+      total += salones[selectedSalonIndex].precio;
+    }
+
     valorTotal.textContent = total.toLocaleString("es-AR");
     return total;
   }
 
   listaServicios.addEventListener("change", calcularTotal);
+  salonSelect.addEventListener("change", calcularTotal);
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -75,8 +109,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const nombre = document.getElementById("nombre").value.trim();
     const fecha = document.getElementById("fecha").value;
     const tematica = document.getElementById("tematica").value.trim();
-    const serviciosSeleccionados = [];
+    const salonIndex = salonSelect.value;
+    const salon = salones[salonIndex];
 
+    const serviciosSeleccionados = [];
     servicios.forEach((servicio, index) => {
       const checkbox = document.getElementById("servicio" + index);
       if (checkbox && checkbox.checked) {
@@ -86,7 +122,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const total = calcularTotal();
 
-    const presupuesto = { nombre, fecha, tematica, servicios: serviciosSeleccionados, total };
+    const presupuesto = {
+      nombre,
+      fecha,
+      tematica,
+      salon: salon.nombre,
+      precioSalon: salon.precio,
+      servicios: serviciosSeleccionados,
+      total
+    };
+
     presupuestos.push(presupuesto);
     localStorage.setItem("presupuestos", JSON.stringify(presupuestos));
 
@@ -110,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <td>${p.nombre}</td>
         <td>${p.fecha}</td>
         <td>${p.tematica}</td>
-        <td>${p.servicios.join(", ")}</td>
+        <td>${p.salon} - ${p.servicios.join(", ")}</td>
         <td>$${p.total.toLocaleString("es-AR")}</td>`;
       tablaPresupuestos.appendChild(row);
     });
