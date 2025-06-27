@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "nombre": "Pérez María",
+    "nombre": "María Pérez",
     "fecha": "2025-07-25",
     "tematica": "Shrek",
     "salon": "Fiestilandia",
@@ -15,7 +15,7 @@
   },
   {
     "id": 2,
-    "nombre": "González Claudia",
+    "nombre": "Claudia González",
     "fecha": "2025-08-20",
     "tematica": "Capybara",
     "salon": "El Castillo",
@@ -26,5 +26,37 @@
       "Mesa dulce para 50 personas"
     ],
     "total": 280000
+  },
+  {
+    "id": 3,
+    "nombre": "Carlos Giménez",
+    "fecha": "2025-09-15",
+    "tematica": "Colapinto",
+    "salon": "Aventura mágica",
+    "precioSalon": 110000,
+    "servicios": [
+      "Maquillaje artístico",
+      "Torta chica (para 20 personas)",
+      "Mesa dulce para 20 personas",
+      "Decoración premium con globos",
+      "Show de animación"
+    ],
+    "total": 288000
+  },
+  {
+    "id": 4,
+    "nombre": "Milagros Sánchez",
+    "fecha": "2025-09-10",
+    "tematica": "Ositos",
+    "salon": "El Castillo",
+    "precioSalon": 120000,
+    "servicios": [
+      "Maquillaje artístico",
+      "Torta chica (para 20 personas)",
+      "Mesa dulce para 20 personas",
+      "Decoración temática básica",
+      "Animador/a con juegos"
+    ],
+    "total": 258000
   }
 ]

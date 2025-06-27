@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("formPresupuesto");
   const listaServicios = document.getElementById("listaServicios");
@@ -46,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
       fetch("../data/salones.json")
         .then(r => r.json())
         .then(data => {
-          salones = data.salones;
+          salones = Array.isArray(data) ? data : data.salones;
           localStorage.setItem("salones", JSON.stringify(salones));
           renderSalones();
         });
